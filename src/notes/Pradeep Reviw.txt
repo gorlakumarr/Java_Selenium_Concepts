@@ -1,0 +1,64 @@
+forward testing
+backward testing
+
+operabiity testing
+
+
+whitelistng
+
+git commit reverse :  
+
+
+hard revert and soft revert
+
+rebase 
+
+enum
+
+abstract class
+
+interface 
+
+
+
+
+
+
+public class CreateAccount {
+ @Test
+
+ public void createNewSavingsAccount() {
+
+ String accountNumber = "1012012234"; //accountNumberField.getText();
+
+ //Save above account number for reuse later
+
+
+ }
+
+
+
+}
+
+
+
+
+
+ public class DepositeMoneyInAcount {
+
+ @Test
+
+ public void depositeMoneySavingsAccount() {
+
+ //Get the saving account number created in "createNewSavingsAccount" method from the above class
+ 
+ 
+
+ }
+
+
+
+}
+
+
+testNG : 

@@ -1,0 +1,154 @@
+		Date :31/05/2020
+		Maven Session-2
+--------------------------------------------------------------
+LINK: https://www.facebook.com/groups/thejavatemple/
+
+properties : Holds data in key=value format.
+=> In maven properties concept is used to provide version details.
+  Like Java version, hibernate f/w version, spring f/w version...ect
+
+---Define property ---
+<properties>
+    <key>value</key>
+</properties>
+--Use property----
+${key}
+
+--Example--- Handle Different Dependencies related to Spring 
+
+	<properties>
+		<spring.version>5.2.5.RELEASE</spring.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+	</dependencies>
+-------------------------------------------------------------
+Few Examples for Properties:-
+a. Java Version properties:
+  <maven.compiler.source>1.8</maven.compiler.source>
+  <maven.compiler.target>1.8</maven.compiler.target>
+b. No web.xml Application properties
+   <failOnMissingWebXml>false</failOnMissingWebXml> 
+
+-------------------------------------------------------------------------
+bom = Bill Of Materials.
+=> It is a pom.xml having all set of possible dependencies with version managed.
+=> You can use another pom.xml into your application pom.xml as in BOM format.
+=> For one f/w or technologies related jars are given as on BOM.
+ex: spring-bom, jersey-bom..etc
+
+=> If just we add bom(pom.xml) as <dependencyManagement> in our pom.xml
+   it will not provide those dependencies to our Build path.
+
+
+--Ex--
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-common</artifactId>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-bom</artifactId>
+				<version>5.2.6.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jersey</groupId>
+				<artifactId>jersey-bom</artifactId>
+				<version>2.25.1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+---------------------------------------------
+*) parent project:
+  It is a maven project used to provide common setup for all/multiple
+   child projects (it is like inheritance).
+
+=> Ex: common properties, common dependencies, dependency management, plugin 
+    management etc..
+
+--Steps to create parent projects--
+> File > new > Maven Project
+> choose checkbox [v] Create simple maven project
+> next > Enter details
+   groupId  : in.nareshit.parent
+ artifactId : MyTestParent
+   version  : 3.2.5
+   package  : pom   (must be pom to behave as parent)
+
+> once it is created then add below details in pom.xml of parent project
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>5.2.6.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>5.4.15.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.46</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+--Steps to use parent in child project--
+> File > new > Maven Project
+> choose checkbox [v] Create simple maven project
+> next > Enter details
+   groupId  : in.nit.child
+ artifactId : MyTestChild
+   version  : 1.2.1
+
+> Next > Finish
+
+> open our project (child project) pom.xml file and add details like 
+
+         <parent>
+		<groupId>[parent project groupId]</groupId>
+		<artifactId>[parent project artifactId]</artifactId>
+		<version>[parent project version]</version>
+	</parent>
+------------------------------------------------------------------------
+ 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite">
+	<test name="GroupsDemo">
+		<classes>
+			<classname = testNGSessions.GroupsDemo_2 " />
+			<methods>
+				<include name=testWindowsOnly " />
+				<exclude name=testLinuxOnly " />
+			</methods>
+		</classes>
+	</test>
+</suite>

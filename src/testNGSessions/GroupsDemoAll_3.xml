@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite">
+	<test name="GroupsDemo">
+		<groups>
+			<define name="functest">
+				<include name="windows" />
+				<include name="linux" />
+			</define>
+
+			<define name="all">
+				<include name="functest" />
+				<include name="checkintest" />
+			</define>
+
+			<run>
+				<include name="all" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="test.sample.Test1" />
+		</classes>
+	</test>
+</suite>
+
+
+
+

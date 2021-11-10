@@ -1,0 +1,76 @@
+Custom CSS
+
+1.Id -> htmltag#id , #id
+2.class -> htmltag.classname , .classname , .c1.c2.c3 , .htmltag.c1.c2.c3
+3.parent>childtag
+
+
+htmltag#id :  ul#categories
+htmltag.classname  :  div.innerclass
+
+
+https://app.hubspot.com/login?hubs_signup-url=www.hubspot.com/&hubs_signup-cta=homepage-nav-login&_ga=2.159766590.2032465248.1619845303-2102863780.1619845303&__cf_chl_jschl_tk__=a233c6ab73c88e8b669241dc3e95321aa372f5a1-1619845304-0-AVs6bq0rAcmiVnZGobmUtGMy5Blkj1m0kNy0C9MbQ0MaNqPB4ygGLkriX0QZXRHVIvSaBZhsAClNBLPmEb774NKOzg49mUgE6Ja5I2ydNX5g5VWucGpA-uPtZagS9m88Ux4oXWKllU4z15FRSLQDJnh7d0aw85nwNJ2jJpKudSR4xueT0uf7WnObT2xE2O73XvB0BfMMZ_fw97HOzpUbQ-hKIwyRO1nco-6igPmVmjSA0IJO7JVmQr7IrtGuy6QDQPcBZUd5v_EaCAXsOhw6FnL8S5jCmGTvm4XpOYMJbIdVgBYKvhtw8CivB--kxSIWOx7PSgzM_edZp-MRQGFW9la9NbFaVg6KL63SopwR8o3OfaPX9CBMQygTv1lDintUf1bYsp9F_5o3ldJ_RnL4C7Yad1-TwFtV0hFiM-Dk8dH4uYTk2KT8Z5gg-qylafH6K8VmjAMWJdKmKtIyZdWoETiDHfvm6UUh6kQxFLNTNqbXrcW5IYKdQ2q0UlWrP7MRhNHSp2gfD2YzZjbqTaSHw_wqEUxr73A9P3OYsRaf5DsUsR-7A9lNNVAfmPe2k1cWkuqZCqDxwWG03sVX5_vxsBc9to2chDPiFupwZZn3oevzl0MM5YTAtYtkwnT7p6Pcbg
+
+input#username
+#username
+
+input.form-control.private-form__control.login-email
+input#username.form-control.private-form__control.login-email
+input#username.form-control.private-form__control.login-email
+input#username.login-email
+.form-control.private-form__control.login-email
+.login-email
+
+
+4. htmltag[id='value']    : 
+
+XPATH	:	//input[@id="username"]
+CSS		:	input[id='username']
+
+XPATH	:	//input[@id="username" and @type="email"]
+CSS		:	input[id='username'][type='email']
+
+
+5. contains the text in css
+
+input[id*='user']
+input[id*='name']
+
+6. starts with text in css
+
+input[id^='user']
+
+7. end with text in css
+
+input[id$='name']
+
+8. comma in css
+
+div.private-form__input-wrapper,input#username
+
+9. first-of-type in css
+
+https://www.blazemeter.com/
+
+div#main_b_footer_second_block>ul>li:first-of-type
+
+
+10. last-of-type
+
+div#main_b_footer_second_block>ul>li:last-of-type
+
+11. nth-of-type
+
+div#main_b_footer_second_block>ul>li:nth-of-type(5)
+
+12. nth-of-type(n)
+
+div#main_b_footer_second_block>ul>li:nth-of-type(n)
+
+13. sibling css
+
+div.private-form__input-wrapper+div.private-form__meta
+
+14. not operator
+
+div.private-form__input-wrapper:not(form-control private-form__control)

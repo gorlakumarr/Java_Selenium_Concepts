@@ -1,0 +1,20 @@
+TestNG Test Next Genration
+
+It's also called TDD Framework (Test Dirven Developement)
+
+Junit+NUnit
+
+Purpose : Design Test Cases In Systematic Way
+
+	1.Generate HTML Reports
+	2.Lots Of Annotations
+	3.Priority
+	4.Dependency Features
+	5.Grouping
+	6.Dataprovider Testing
+	7.Parallel execution	
+
+Testing : Open Source,Free
+
+It's only called : Java Testing Unit Framework
+

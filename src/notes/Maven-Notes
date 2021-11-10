@@ -1,0 +1,53 @@
+Maven : Build Automation Tool
+
+Project Needs:
+
+	1.Jdk File
+	2.Selenium Webdriver Jar File 
+	3.TestNG Jar File
+	3.Apche POI API
+	4.Log 4j API
+	5.Cucumber Jar file
+	
+	In general we add all the above jars in Build Path for the normal java project.
+
+	In Maven Context:
+	
+	Centralised Repository
+	It have all the jars dependency form res. owners of jars
+	
+	Now in Maven Project:
+	
+	In this context i will try to contact with the centralised repository via maven plugin by POM.xml
+	
+	Dependency:
+		1.GroupId
+		2.ArificatId
+		3.Version Number
+	
+	Whatever jars downloaded from centralised repository will be added to .m2 folders
+	
+	Local Company Repository
+	
+	Maven Life Cycle:
+	
+	1.Maven Compile    						 ---(Compiler Plugin)
+	2.Maven Test 						     ---(Surfire Plugin)
+	3.Maven Resources(Generate Jar Files)    ---(Maven Resources Plugin) - Generates--(JARs,WARs,EARs)
+	
+	POM: Project Object Model
+	
+	1.When jars not downloaded properly then we need to clean install,
+		it will generate the build and clean artifacts and downloaded properly
+	2.Force Update the Project
+	3.Re import
+	
+	
+	Maven Commands:
+	
+	mvn clean install
+	mvn test
+	mvn package -Dskiptests
+	
+	https://maven.apache.org/plugins/
+	

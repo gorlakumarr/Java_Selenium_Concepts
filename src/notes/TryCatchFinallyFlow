@@ -1,0 +1,67 @@
+	try{
+			statement1;
+			statement2;
+			statement3;
+		}
+			catch(Exception e){
+					statement4;
+						}
+			statement5;
+
+
+	Case 1:If there is no exception
+			
+			1,2,3,5 -->Normal Termination
+			
+	Case 2:Exception got raised at stmt.2:
+	
+			1,4,5 --->Normal
+			
+			
+	Case 3:Exception got rasied at stmt.2 and corresponding catch block not Matched
+			
+			1....Abnormal Termination
+			
+	Case 4:Exception raised at stmt.4 or stmt.5
+	
+				Abnormal Termination	
+				
+				
+				
+Another Scenario:
+
+		try{
+			stmt1;
+			stmt2;
+			stmt3;
+		}
+			catch(Exception e){
+			stmt4;
+				}
+	finally{
+		stmt5;
+		}
+		stmt6;
+		
+	Case 1: if there is no exception
+	
+			1,2,3,5,6 -->Normal Termination
+			
+	Case 2: Exception got raised @ stmt2 and corresponing catch block matched.
+	
+			1,4,5,6  -->Normal Termination
+			
+	Case 3: Exception got raised @ stmt2 and corresponing catch block not matched.
+	
+			1,5	-->Abnormal Termination
+			
+	Case 4: Exception got raised @ stmt4
+	
+			1,5....Abnormal Termination
+			
+	Case 5:	Exception @stmt5 or Stmt6
+			
+			1,2,3...Abonormal Termination
+			
+			1,2,3,5...Abonormal Termination
+			
