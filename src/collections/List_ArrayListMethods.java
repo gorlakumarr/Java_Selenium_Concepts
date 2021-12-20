@@ -48,6 +48,7 @@ public class List_ArrayListMethods {
 
 		ArrayList<Integer> arrayList3 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 //		arrayList3.removeIf(num -> num % 2 == 0);
+
 		System.out.println("arrayList3 " + arrayList3);
 
 		arrayList2.retainAll(Collections.singleton("dev ops"));
