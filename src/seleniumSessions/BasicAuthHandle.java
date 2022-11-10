@@ -1,9 +1,9 @@
 package seleniumSessions;
 
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Optional;
 
-import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;

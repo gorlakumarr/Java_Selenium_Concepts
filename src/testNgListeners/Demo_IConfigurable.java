@@ -1,7 +1,6 @@
 package testNgListeners;
 
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
 
 public class Demo_IConfigurable {
 

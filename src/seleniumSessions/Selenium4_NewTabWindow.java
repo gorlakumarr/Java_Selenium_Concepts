@@ -1,7 +1,6 @@
 package seleniumSessions;
 
 import java.util.ArrayList;
-import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;

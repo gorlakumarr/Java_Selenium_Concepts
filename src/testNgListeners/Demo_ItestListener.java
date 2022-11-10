@@ -2,7 +2,6 @@ package testNgListeners;
 
 import org.junit.Assert;
 import org.testng.SkipException;
-import org.testng.annotations.Test;
 
 public class Demo_ItestListener {
 

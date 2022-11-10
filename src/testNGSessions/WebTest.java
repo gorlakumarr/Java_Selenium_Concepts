@@ -1,7 +1,5 @@
 package testNGSessions;
 
-import org.testng.annotations.Test;
-
 public class WebTest {
 	private int m_numberOfTimes;
 

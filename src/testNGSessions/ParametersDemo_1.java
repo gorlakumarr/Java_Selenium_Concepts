@@ -2,8 +2,7 @@ package testNGSessions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.junit.runners.Parameterized.Parameters;
 public class ParametersDemo_1 {
 
 	@Test

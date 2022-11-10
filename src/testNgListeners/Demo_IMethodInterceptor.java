@@ -1,7 +1,5 @@
 package testNgListeners;
 
-import org.testng.annotations.Test;
-
 public class Demo_IMethodInterceptor {
 
 	@Test(priority = 2)

@@ -6,7 +6,6 @@ import java.util.List;
 import org.testng.IMethodInstance;
 import org.testng.IMethodInterceptor;
 import org.testng.ITestContext;
-import org.testng.annotations.Test;
 
 public class ListenersTestNG_IMethodInterceptor implements IMethodInterceptor {
 

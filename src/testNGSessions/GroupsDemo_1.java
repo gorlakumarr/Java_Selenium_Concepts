@@ -1,7 +1,5 @@
 package testNGSessions;
 
-import org.testng.annotations.Test;
-
 public class GroupsDemo_1 {
 
 	@Test(groups = { "functest", "checkintest" })

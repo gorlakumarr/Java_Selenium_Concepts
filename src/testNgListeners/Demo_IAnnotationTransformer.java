@@ -1,7 +1,5 @@
 package testNgListeners;
 
-import org.testng.annotations.Test;
-
 public class Demo_IAnnotationTransformer {
 
 	ListenersTestNG_IAnnotationTransformer_1 obj = new ListenersTestNG_IAnnotationTransformer_1();

@@ -1,8 +1,5 @@
 package mockitoSession;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
-
 import java.util.List;
 
 import org.junit.Before;

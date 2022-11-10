@@ -1,7 +1,6 @@
 package testNGSessions;
 
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
 
 public class ParametersDemo_2 {
 	// This method will provide data to any test method that declares that its Data
