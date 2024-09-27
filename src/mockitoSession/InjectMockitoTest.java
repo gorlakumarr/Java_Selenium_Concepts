@@ -1,5 +1,7 @@
 package mockitoSession;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.List;
 
 import org.junit.Before;
